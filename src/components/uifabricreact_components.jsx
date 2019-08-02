@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import Pickers from "./pickers";
+import ListC from "./lists";
+import MenuNav from "./menus";
+import Surfaces from "./surfaces";
 import {
   PrimaryButton,
   DefaultButton,
@@ -27,6 +31,7 @@ class UifabricComponents extends Component {
 
     return (
       <React.Fragment>
+        <MenuNav />
         <div>
           <PrimaryButton onClick={() => this.handleOnclick()} className="m-2">
             I am a button
@@ -202,10 +207,14 @@ class UifabricComponents extends Component {
             />
           </div>
         </div>
+        <Pickers />
+        <h5>test added here</h5>
+        <ListC />
+        <Surfaces />
       </React.Fragment>
     );
   }
-
+  //   <Pickers />
   handleOnclick = () => {
     alert("primary button clicked");
   };
